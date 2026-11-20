@@ -7,15 +7,16 @@ nbImage = 10
 print("------ choix fichier -------")
 print("1. arreter")
 print("2. continuer")
-fichier = "arreter" if input("1 ou 2: ") == 1 else  "continuer"
+fichier = "arreter" if input("1 ou 2: ") == "1" else  "continuer"
 cam = Camera()
 cam.demarrer()
 
 for i in range(nbImage):
     image = cam.capture()
     cv2.imshow("Frame", image)
+    cv2.waitKey(1)
     cv2.imwrite(f"../image_rgb/entrainement/{fichier}/image_{img_id}.png", image)
     print("a picture have been taking...")
     time.sleep(4)
-    nbImage += 1
+    img_id += 1
 print("all 10 picture have been captured")
