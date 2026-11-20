@@ -22,7 +22,7 @@ for i in range(nbImage):
     image = cam.capture()
     cv2.imshow("Frame", image)
     cv2.waitKey(1)
-    cv2.imwrite(f"../image_rgb/entrainement/{fichier}/image_{img_id}.png", image)
+    cv2.imwrite(f"../image_rgb/validation/{fichier}/image_{img_id}.png", image)
     print("a picture have been taking...")
     time.sleep(4)
     img_id += 1
