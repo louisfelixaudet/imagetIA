@@ -9,7 +9,7 @@ try:
         img_id = int(f.read().strip())
 except (FileNotFoundError, ValueError):
     img_id = 0
-    
+
 nbImage = 10
 print("------ choix fichier -------")
 print("1. arreter")
