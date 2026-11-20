@@ -1,8 +1,15 @@
 from lireImage import Camera
 import cv2
 import time
+import os
 
-img_id = 60
+ID_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "id.txt")
+try:
+    with open(ID_FILE) as f:
+        img_id = int(f.read().strip())
+except (FileNotFoundError, ValueError):
+    img_id = 0
+    
 nbImage = 10
 print("------ choix fichier -------")
 print("1. arreter")
@@ -19,4 +26,9 @@ for i in range(nbImage):
     print("a picture have been taking...")
     time.sleep(4)
     img_id += 1
+
+with open(ID_FILE, "w") as f:
+    f.write(str(img_id))
+
 print("all 10 picture have been captured")
+
