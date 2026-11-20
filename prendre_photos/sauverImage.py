@@ -2,7 +2,7 @@ from lireImage import Camera
 import cv2
 import time
 
-img_id = 0
+img_id = 60
 nbImage = 10
 print("------ choix fichier -------")
 print("1. arreter")
