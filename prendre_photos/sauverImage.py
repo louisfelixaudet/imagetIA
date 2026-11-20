@@ -8,9 +8,11 @@ print("------ choix fichier -------")
 print("1. arreter")
 print("2. continuer")
 fichier = "arreter" if input("1 ou 2: ") == 1 else  "continuer"
+cam = Camera()
+cam.demarrer()
 
 for i in range(nbImage):
-    image = Camera.capture()
+    image = cam.capture()
     cv2.imwrite(f"./image_rgb/{fichier}/image_{img_id}.png", image)
     print("a picture have been taking...")
     time.sleep(4)
