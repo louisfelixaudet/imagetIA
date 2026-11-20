@@ -14,4 +14,5 @@ for i in range(nbImage):
     cv2.imwrite(f"./image_rgb/{fichier}/image_{img_id}.png", image)
     print("a picture have been taking...")
     time.sleep(4)
+    nbImage += 1
 print("all 10 picture capture")
