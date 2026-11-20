@@ -3,7 +3,7 @@ import cv2
 import time
 
 img_id = 0
-nbImage = 25
+nbImage = 10
 print("------ choix fichier -------")
 print("1. arreter")
 print("2. continuer")
