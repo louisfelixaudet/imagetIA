@@ -12,5 +12,6 @@ fichier = "arreter" if input("1 ou 2: ") == 1 else  "continuer"
 for i in range(nbImage):
     image = Camera.capturer()
     cv2.imwrite(f"./image_rgb/{fichier}/image_{img_id}.png", image)
+    print("a picture have been taking...")
     time.sleep(4)
 print("all 10 picture capture")
