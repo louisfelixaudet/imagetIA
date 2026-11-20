@@ -13,6 +13,7 @@ cam.demarrer()
 
 for i in range(nbImage):
     image = cam.capture()
+    cv2.imshow("Frame", image)
     cv2.imwrite(f"../image_rgb/entrainement/{fichier}/image_{img_id}.png", image)
     print("a picture have been taking...")
     time.sleep(4)
