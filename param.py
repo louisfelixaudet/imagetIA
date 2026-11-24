@@ -9,3 +9,6 @@ AUG_SPEED = 5
 DIM_SPEED = 6
 ARRET = 7
 STOP = 8
+
+ARRETER = "arreter"
+CONTINUER = "continuer"
