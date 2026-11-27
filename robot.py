@@ -3,8 +3,8 @@ from gpiozero import DigitalOutputDevice, PWMOutputDevice
 
 class Robot:
     def __init__(self):
-        self.in1 = DigitalOutputDevice(6)   # In1
-        self.in2 = DigitalOutputDevice(5)   # In2
+        self.in1 = DigitalOutputDevice(5)
+        self.in2 = DigitalOutputDevice(6)
         self.ena = PWMOutputDevice(13, frequency=1000)  # EnA
         self.in3 = DigitalOutputDevice(15)  # In3
         self.in4 = DigitalOutputDevice(14)  # In4

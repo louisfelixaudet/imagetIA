@@ -3,10 +3,10 @@ import keyboard
 import param
 
 MOVE_KEYS = {
-    "q": param.GAUCHE,
     "w": param.AVANCER,
-    "e": param.DROITE,
+    "a": param.GAUCHE,
     "s": param.RECULER,
+    "d": param.DROITE,
 }
 
 DEFAULT_POWER = {
@@ -89,7 +89,7 @@ class telecom:
 
 
 telecommande = telecom()
-print("Telecommande: q=gauche  w=avancer  e=droite  s=reculer")
+print("Telecommande: w=avancer  a=gauche  s=reculer  d=droite")
 print("Relacher = arret.  ./, = vitesse  espace=arret  x=quitter")
 print(f"Envoi vers {param.IP_ADRESS}:{telecommande.port}")
 while telecommande.run:
