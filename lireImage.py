@@ -38,7 +38,14 @@ class CameraLinux:
 
 
     def arreter(self):
-       self.picam2.stop()
+        try:
+            self.picam2.stop()
+        except Exception:
+            pass
+        try:
+            self.picam2.close()
+        except Exception:
+            pass
 
 class Camera:
     def __init__(self, largeur = 320, hauteur = 240):
